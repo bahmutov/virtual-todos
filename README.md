@@ -11,14 +11,30 @@
     npm install --save virtual-todos
 
 Then from the main application that uses [virtual-dom](https://github.com/Matt-Esch/virtual-dom)
-call the single exported function, passing list of todos
+call the single exported function, passing an object with a list of todos
 
 ```js
 var render = require('virtual-todos')
-var virtualTree = render(todos)
+var virtualTree = render(Todos)
 ```
 
-I recommend generating `todos` using [fake-todos](https://github.com/bahmutov/fake-todos)
+The virtual tree will become DOM tree, and the user will try to add, remove and mark todos
+as done. Thus we need to have the following callbacks on the `Todos` object. Each may be a noop.
+
+```js
+var Todos = {
+    items: [{ 
+        what: 'do something', 
+        id: 'ex102' 
+    }],
+    add: function (what) {},
+    remove: function (item) {},
+    mark: function (id, done) {},
+    clearCompleted: function () {}
+}
+```
+
+I recommend generating `Todos.items` using [fake-todos](https://github.com/bahmutov/fake-todos)
 
 ## Example
 
