@@ -44,6 +44,12 @@ I have full application using this rendering function at
 offline [hydrate-app.js](https://github.com/bahmutov/hydrate-vdom-todo/blob/master/hydrate-app.js)
 modes.
 
+## Related
+
+* [fake-todos](https://github.com/bahmutov/fake-todos) to generate fake todo items
+* [todomvc-model](https://github.com/bahmutov/todomvc-model) is the model that keeps
+  todo items and responds to outside events
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
