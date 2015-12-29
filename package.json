@@ -4,7 +4,7 @@
   "main": "src/render.js",
   "version": "0.0.0-semantic-release",
   "scripts": {
-    "test": "rocha src/*-spec.js",
+    "test": "node --harmony node_modules/.bin/rocha src/*-spec.js",
     "lint": "standard *.js src/*.js",
     "commit": "commit-wizard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
