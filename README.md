@@ -6,6 +6,28 @@
 [![Build status][virtual-todos-ci-image] ][virtual-todos-ci-url]
 [![semantic-release][semantic-image] ][semantic-url]
 
+## Use
+
+    npm install --save virtual-todos
+
+Then from the main application that uses [virtual-dom](https://github.com/Matt-Esch/virtual-dom)
+call the single exported function, passing list of todos
+
+```js
+var render = require('virtual-todos')
+var virtualTree = render(todos)
+```
+
+I recommend generating `todos` using [fake-todos](https://github.com/bahmutov/fake-todos)
+
+## Example
+
+I have full application using this rendering function at 
+[hydrate-vdom-todo](https://github.com/bahmutov/hydrate-vdom-todo) in both online
+[src/app.js](https://github.com/bahmutov/hydrate-vdom-todo/blob/master/src/app.js) and
+offline [hydrate-app.js](https://github.com/bahmutov/hydrate-vdom-todo/blob/master/hydrate-app.js)
+modes.
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
